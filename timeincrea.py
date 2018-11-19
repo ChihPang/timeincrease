@@ -1,6 +1,6 @@
 import datetime
 print("ffmpeg -i 1.mp4 -ss 00:00:00 -t 00:00:02 output1.ts")
-
+# it start from the 00:00:00
 
 
 a = datetime.datetime(100,1,1,00,00,00)
@@ -18,7 +18,7 @@ print("ffmpeg -i 1.mp4 -ss",b.time(),"-t 00:00:02 output2.ts")
 
 
 counter = 3
-while counter < 301:
+while counter < 301: # change 301 to the number you want 
     
   b = b + datetime.timedelta(0,2)# add two seconds
   print("ffmpeg -i 1.mp4 -ss",b.time(),"-t 00:00:02 output{}.ts".format(counter))
